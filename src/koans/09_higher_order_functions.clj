@@ -1,6 +1,6 @@
 (ns koans.09-higher-order-functions
   (:require [koan-engine.core :refer :all]
-    [clojure.string :as string]))
+            [clojure.string :as string]))
 
 (meditations
  "The map function relates a sequence to another"
@@ -32,5 +32,5 @@
 
  "Numbers are not the only things one can reduce"
  (= "longest" (reduce (fn [a b]
-                        (if (< (string/length a) (string/length b)) b a))
+                        (if (< (count a) (count b)) b a))
                       ["which" "word" "is" "longest"])))
